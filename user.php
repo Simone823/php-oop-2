@@ -1,7 +1,13 @@
 <?php
 
+    // Includo creditCard.php
+    require_once __DIR__."./creditCard.php";
+
     // Classe user
     class User {
+
+        // Use CreditCard trait
+        use CreditCard;
 
         // Name
         public $name;
