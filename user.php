@@ -1,13 +1,7 @@
 <?php
 
-    // Includo creditCard.php
-    require_once __DIR__."./creditCard.php";
-
     // Classe user
     class User {
-
-        // Use CreditCard trait
-        use CreditCard;
 
         // Name
         public $name;
@@ -27,12 +21,15 @@
         // Sconto
         protected $discount = 0;
 
+        protected $credit_cards = [];
+
         // Funzione construct
-        function __construct($_name = '', $_lastname = '', $_age = 0, $_email = '') {
+        function __construct($_name = '', $_lastname = '', $_age = 0, $_email = '', $_credit_card) {
             $this->name = $_name;
             $this->lastname = $_lastname;
             $this->age = $_age;
             $this->email = $_email;
+            $this->credit_cards[] = $_credit_card;
         }
 
         // Funzione get full name
