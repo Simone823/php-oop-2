@@ -15,6 +15,12 @@
         // Email
         protected $email;
 
+        // Registered
+        protected $registered = false;
+
+        // Sconto
+        protected $discount = 0;
+
         // Funzione construct
         function __construct($_name = '', $_lastname = '', $_age = 0, $_email = '') {
             $this->name = $_name;
