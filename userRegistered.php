@@ -10,7 +10,7 @@
         private $password;
 
         // Funzione construct
-        function __construct($_name, $_lastname, $_age, $_email, $_password, $_credit_card){
+        function __construct($_name, $_lastname, $_age, $_email, $_password, $_credit_card, $_orders){
 
             $this->registered = true;
             $this->discount = 20;
@@ -23,6 +23,7 @@
                 $_age,
                 $_email,
                 $_credit_card,
+                $_orders,
             );
         }
 
