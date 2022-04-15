@@ -21,6 +21,7 @@
         // Sconto
         protected $discount = 0;
 
+        // Array credit cards
         protected $credit_cards = [];
 
         // Ordini
@@ -32,7 +33,7 @@
             $this->lastname = $_lastname;
             $this->age = $_age;
             $this->verifiedEmail($_email);
-            $this->credit_cards[] = $_credit_card;
+            $this->addCreditCard($_credit_card);
             $this->orders[] = $_orders;
         }
 
@@ -48,6 +49,11 @@
             } else {
                 $this->email = $_email;
             }
+        }
+
+        // Funzione che pusha la credit card nell'array credits_cards
+        function addCreditCard ($_credit_card) {
+            $this->credit_cards[] = $_credit_card;
         }
     }
 
