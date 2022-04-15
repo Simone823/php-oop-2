@@ -31,7 +31,7 @@
             $this->name = $_name;
             $this->lastname = $_lastname;
             $this->age = $_age;
-            $this->email = $_email;
+            $this->verifiedEmail($_email);
             $this->credit_cards[] = $_credit_card;
             $this->orders[] = $_orders;
         }
@@ -39,6 +39,15 @@
         // Funzione get full name
         function getFullName() {
             return "$this->name" . ' ' . "$this->lastname";
+        }
+
+        // Funzione verifica email
+        function verifiedEmail($_email) {
+            if( filter_var($_email, FILTER_VALIDATE_EMAIL) === false ){
+                die('Formato email non corretto');
+            } else {
+                $this->email = $_email;
+            }
         }
     }
 
