@@ -11,12 +11,6 @@
     $creditcard1 = new CreditCard('4000340406860375', 2010, '333', 'mario', 'rossi');
     var_dump($creditcard1);
 
-    $user1 = new User('Mario', 'Rossi', 30, 'euivbheuvb', $creditcard1);
-    var_dump($user1);
-
-    $userRegistered = new UserRegistered('Mario', 'Rossi', 30, 'uhgberyfe', 'jievbhe', $creditcard1);
-    var_dump($userRegistered);
-
     $product1 = new Product(1, 'Pallina', 'Animali', 'Giochi', 20);
     var_dump($product1);
 
@@ -28,4 +22,10 @@
 
     $order2 = new Order($product2);
     var_dump($order2);
+
+    $user1 = new User('Mario', 'Rossi', 30, 'mariorossi@gmail.com', $creditcard1, $order1);
+    var_dump($user1);
+
+    $userRegistered = new UserRegistered('Mario', 'Rossi', 30, 'mariorossi@gmail.com', 'jievbhe', $creditcard1, $order1);
+    var_dump($userRegistered);
 ?>
